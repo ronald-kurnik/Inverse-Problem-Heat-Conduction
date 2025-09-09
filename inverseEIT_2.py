@@ -30,7 +30,7 @@ def temperature_model(x, t, alpha, N_terms=50):
 # Generate "noisy" experimental data
 T_meas_true = temperature_model(xs, t_meas, alpha_true)
 np.random.seed(42) # for reproducibility
-noise_level = 0.25 # °C
+noise_level = 0.025 # °C
 T_meas = T_meas_true + np.random.normal(0, noise_level, len(t_meas))
 
 # --- 2. The Inverse Problem Solver ---
